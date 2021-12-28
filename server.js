@@ -1,3 +1,4 @@
+require("dotenv").config();
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -12,7 +13,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 // database setup
-
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
 // API routes
 app.get("/", (req, res) => {
   res.send("Hello World!");
