@@ -10,7 +10,7 @@ export default function Header() {
       <IconButton>
         <PersonIcon fontSize="large" className="header__icon" />
       </IconButton>
-      <img className="header__logo" src={tinderLogo} alt="" srcset="" />
+      <img className="header__logo" src={tinderLogo} alt=""  />
       <IconButton>
         <ForumIcon fontSize="large" className="header__icon" />
       </IconButton>
