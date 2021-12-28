@@ -1,9 +1,19 @@
-import './Header.css'
+import "./Header.css";
+import PersonIcon from "@mui/icons-material/Person";
+import { IconButton } from "@mui/material";
+import tinderLogo from "../images/tinder-logo.png";
+import ForumIcon from "@mui/icons-material/Forum";
 
 export default function Header() {
   return (
-    <div>
-     Hello header 
-    </div>
-  )
+    <header className="header">
+      <IconButton>
+        <PersonIcon fontSize="large" className="header__icon" />
+      </IconButton>
+      <img className="header__logo" src={tinderLogo} alt="" srcset="" />
+      <IconButton>
+        <ForumIcon fontSize="large" className="header__icon" />
+      </IconButton>
+    </header>
+  );
 }
